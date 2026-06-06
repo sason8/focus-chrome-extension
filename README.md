@@ -1,4 +1,4 @@
-# đźŽŻ Focus Mode - Chrome Extension
+# 🎯 Focus Mode - Chrome Extension
 
 ![Chrome Extensions](https://img.shields.io/badge/Chrome_Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
