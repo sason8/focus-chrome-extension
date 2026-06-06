@@ -12,14 +12,14 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Create Zip Package
       run: |
-        zip -r focusflow-extension.zip manifest.json background.js popup.html popup.js popup.css options.html options.js icon.png LICENSE README.md
+        zip -r focusflow-extension.zip . -x "*.git*"
 
     - name: Upload Extension Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: focusflow-chrome-extension
         path: focusflow-extension.zip
