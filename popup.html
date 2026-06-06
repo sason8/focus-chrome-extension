@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 250px;
+      padding: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #1e1e2e;
+      color: #cdd6f4;
+      text-align: center;
+      margin: 0;
+    }
+    h2 {
+      margin-top: 0;
+      color: #89b4fa;
+      font-size: 18px;
+    }
+    p {
+      font-size: 13px;
+      color: #a6adc8;
+      margin-bottom: 20px;
+    }
+    .toggle-btn {
+      background: #f38ba8;
+      color: #11111b;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    .toggle-btn.active {
+      background: #a6e3a1;
+    }
+  </style>
+</head>
+<body>
+  <h2>Focus Mode</h2>
+  <p>Block distracting websites and get back to work.</p>
+  <button id="toggleBtn" class="toggle-btn">Enable Focus</button>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Mode",
+  "version": "1.0",
+  "description": "A minimalist Chrome extension to block distracting websites and help you focus.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.facebook.com/*",
+    "*://*.twitter.com/*",
+    "*://*.instagram.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
