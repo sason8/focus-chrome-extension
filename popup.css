@@ -1,0 +1,257 @@
+:root {
+  --bg: #1e1e2e;
+  --bg-dark: #11111b;
+  --text: #cdd6f4;
+  --text-muted: #a6adc8;
+  --primary: #cba6f7;
+  --primary-hover: #b4befe;
+  --green: #a6e3a1;
+  --red: #f38ba8;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  width: 300px;
+  margin: 0;
+  padding: 10px;
+  background: var(--bg-dark);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 20px;
+}
+
+.logo h2 {
+  font-size: 16px;
+  margin: 0;
+  background: linear-gradient(135deg, #cba6f7 0%, #89b4fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.options-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.2s;
+  padding: 4px;
+}
+
+.options-btn:hover {
+  color: white;
+}
+
+/* Timer styles */
+.timer-widget {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.timer-mode {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.timer-display {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: monospace;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--bg-dark);
+  flex: 2;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border: 1px solid var(--border);
+  flex: 1;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Blocklist controls */
+.block-controls {
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+  margin-bottom: 15px;
+}
+
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #313244;
+  transition: .3s;
+  border-radius: 22px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--green);
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Quick Add Form */
+.quick-add-form {
+  display: flex;
+  gap: 6px;
+}
+
+.quick-add-form input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: white;
+  outline: none;
+  font-size: 12px;
+}
+
+.quick-add-form input:focus {
+  border-color: var(--primary);
+}
+
+.quick-add-form button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: white;
+  border-radius: 6px;
+  width: 32px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.quick-add-form button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.status-msg {
+  font-size: 11px;
+  color: var(--green);
+  text-align: center;
+  margin-top: 8px;
+  min-height: 14px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 15px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

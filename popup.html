@@ -2,47 +2,51 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <style>
-    body {
-      width: 250px;
-      padding: 15px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #1e1e2e;
-      color: #cdd6f4;
-      text-align: center;
-      margin: 0;
-    }
-    h2 {
-      margin-top: 0;
-      color: #89b4fa;
-      font-size: 18px;
-    }
-    p {
-      font-size: 13px;
-      color: #a6adc8;
-      margin-bottom: 20px;
-    }
-    .toggle-btn {
-      background: #f38ba8;
-      color: #11111b;
-      border: none;
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-      width: 100%;
-    }
-    .toggle-btn.active {
-      background: #a6e3a1;
-    }
-  </style>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h2>Focus Mode</h2>
-  <p>Block distracting websites and get back to work.</p>
-  <button id="toggleBtn" class="toggle-btn">Enable Focus</button>
+  <div class="card">
+    <div class="header">
+      <div class="logo">
+        <span class="logo-icon">⏳</span>
+        <h2>FocusFlow</h2>
+      </div>
+      <button id="optionsLink" class="options-btn" title="Open Dashboard">⚙️</button>
+    </div>
+
+    <!-- Pomodoro Timer Widget -->
+    <div class="timer-widget">
+      <div id="timerMode" class="timer-mode">FOCUS</div>
+      <div id="timerDisplay" class="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button id="startTimerBtn" class="btn btn-primary">Start Focus</button>
+        <button id="resetTimerBtn" class="btn btn-secondary">Reset</button>
+      </div>
+    </div>
+
+    <!-- Block List Quick Control -->
+    <div class="block-controls">
+      <div class="control-row">
+        <span>Blocklist Blocker</span>
+        <label class="switch">
+          <input type="checkbox" id="blockToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="quick-add-form">
+        <input type="text" id="siteInput" placeholder="Block website (e.g. reddit.com)">
+        <button id="addSiteBtn">+</button>
+      </div>
+      
+      <div class="status-msg" id="statusMsg"></div>
+    </div>
+
+    <div class="footer">
+      <a href="#" id="manageLink">Open Settings Dashboard &rarr;</a>
+    </div>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
